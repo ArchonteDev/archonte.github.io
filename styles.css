@@ -1,0 +1,62 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      overflow: hidden;
+    }
+    body { background-color: var(--bg); color: var(--text);
+    }
+    :root {
+      --bg: #FFFFFF;
+      --text: #333333;
+      --card-bg: #F6F5F4;
+      --code-bg: #eaeaea;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #151515;
+        --text: #f4f6f8;
+        --card-bg: #232323;
+        --code-bg: #2c2c2c;
+      }
+    }
+    .container {
+      position: relative;
+      top: 45%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .logo { width: 60px; height: auto; margin-bottom: 2rem; }
+    .themed-logo {
+      width: 150px; 
+      height: 50px;
+      background-image: url('assets/images/logo-text.png'); 
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    body.dark-mode .themed-logo {
+      background-image: url('assets/images/logo-text-white.png');
+    }
+    .message {
+      font-size: 1rem;
+      font-weight: 400;
+      max-width: 480px;
+      line-height: 1.5;
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 12px;
+    }
+    .message h3 { margin-bottom: 0.5rem; }
+    .message p { margin-bottom: 1rem; }
+    .message p:last-child { margin-bottom: 0; }
+    .message code {
+      font-family: monospace;
+      background: var(--code-bg);
+      padding: 2px 4px;
+      border-radius: 4px;
+      display: inline-block;
+    }
